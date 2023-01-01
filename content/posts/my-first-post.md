@@ -4,8 +4,9 @@ date: 2022-07-09T03:46:56Z
 draft: false
 ---
 
-This is coby testing out a post 
+This is a post by Coby testing out a mermaid functionality.
 
+This is what you would type in the .MD file:
 ```
 {{</*mermaid align="left"*/>}}
 graph LR;
@@ -16,8 +17,9 @@ graph LR;
 {{</* /mermaid */>}}
 ```
 
-renders as
+{{< line_break >}}
 
+Thereafter Hugo will render it as follows:
 {{<mermaid align="left">}}
 graph LR;
     A[Coby] -->|Testing| B(Mermaid)

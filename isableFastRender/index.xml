@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Jul 2022 03:46:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coby Testing Mermaid Diagram</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Sat, 09 Jul 2022 03:46:56 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>This is a post by Coby testing out a mermaid functionality.
+This is what you would type in the .MD file:
+{{&amp;lt;mermaid align=&amp;#34;left&amp;#34;&amp;gt;}}graph LR;A[Coby] --&amp;gt;|Testing| B(Mermaid)B(Mermaid) --&amp;gt; C{Push to Github}C --&amp;gt;|One| D[Github creates Container]C --&amp;gt;|Two| E[Builds &amp;amp; Deploys Website on Push]{{&amp;lt; /mermaid &amp;gt;}} Thereafter Hugo will render it as follows: graph LR;A[Coby] --&gt;|Testing| B(Mermaid)B(Mermaid) --&gt; C{Push to Github}C --&gt;|One| D[Github creates Container]C --&gt;|Two| E[Builds &amp; Deploys Website on Push]</description>
+    </item>
+    
+  </channel>
+</rss>

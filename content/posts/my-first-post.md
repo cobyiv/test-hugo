@@ -6,10 +6,10 @@ draft: false
 
 Hello, Hugo! 🐝 adsfa
 
-{{< mermaid >}}
-graph TD
-  A --> B
-  B --> C
-  C --> D
-{{< /mermaid >}}
-
+{{</*mermaid align="left"*/>}}
+graph LR;
+    A[Hard edge] -->|Link text| B(Round edge)
+    B --> C{Decision}
+    C -->|One| D[Result one]
+    C -->|Two| E[Result two]
+{{</* /mermaid */>}}

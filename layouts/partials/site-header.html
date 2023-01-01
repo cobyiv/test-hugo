@@ -2,8 +2,6 @@
 {{ if $featured_image }}
 {{/* Trimming the slash and adding absURL make sure the image works no matter where our site lives */}}
 <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });</script>
   <div class="{{ .Site.Params.cover_dimming_class | default " bg-black-60" }}">
     {{ partial "site-navigation.html" .}}
     <div class="tc-l pv4 pv6-l ph3 ph4-ns">
@@ -33,5 +31,18 @@
       {{ end }}
     </div>
   </div>
+  {{ if (or (and (ne .Params.disableMermaid nil) (not .Params.disableMermaid)) (not .Site.Params.disableMermaid)) }}
+  {{ if isset .Params "custommermaidurl" }}
+  <script src="{{ .Params.customMermaidURL }}"></script>
+  {{ else if isset .Site.Params "custommermaidurl" }}
+  <script src="{{ .Site.Params.customMermaidURL }}"></script>
+  {{ else }}
+  <script src="{{" mermaid/mermaid.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end
+    }}"></script>
+  {{ end }}
+  <script>
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  {{ end }}
 </header>
 {{ end }}

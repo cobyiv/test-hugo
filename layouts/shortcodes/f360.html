@@ -1,0 +1,27 @@
+<script>
+    function resizeIframe(obj) {
+        obj.style.height = 1.05 * obj.contentWindow.document.body.scrollHeight + 'px';
+    }
+</script>
+
+{{ $scratch := newScratch }}
+
+{{ $size := .Get "size" }}
+{{ if eq $size "S" }}
+{{ $scratch.Set "width" 640 }}
+{{ $scratch.Set "height" 480 }}
+{{ else if eq $size "M" }}
+{{ $scratch.Set "width" 800 }}
+{{ $scratch.Set "height" 600 }}
+{{ else if eq $size "L" }}
+{{ $scratch.Set "width" 1024 }}
+{{ $scratch.Set "height" 768 }}
+{{ end }}
+
+{{ $url := .Get "url" }}
+{{ $suffix := "?mode=embed" }}
+{{ $path := print $url $suffix }}
+
+<iframe name="iframe" src="{{ $path }}" width={{ $scratch.Get "width" }} height={{ $scratch.Get "height" }}
+    allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0">
+</iframe>

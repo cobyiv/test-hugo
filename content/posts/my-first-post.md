@@ -27,3 +27,11 @@ graph LR;
     C -->|One| D[Github creates Container]
     C -->|Two| E[Builds & Deploys Website on Push]
 {{</mermaid>}}
+
+{{< line_break >}}
+{{< line_break >}}
+{{< line_break >}}
+
+Testing out Model Embed
+
+{{< f360 url=https://a360.co/3Fn3rdO size=M >}}
